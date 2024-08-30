@@ -1,0 +1,45 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex border-bottom title-part-padding px-0 mb-3 align-items-center">
+        <h4 class="mb-0 fs-5"> NOTICIAS RELEVANTES </h4>
+        <select class="form-select ms-auto" [(ngModel)]="categoriaSeleccionada">
+          <option *ngFor="let categoria of categorias" [value]="categoria">
+            {{ categoria }}
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="col-md-6 col-lg-4" *ngFor="let noticia of filtrarNoticias()">
+      <!-- Card -->
+      <div class="card overflow-hidden hover-img">
+        <div class="position-relative">
+          <img
+            class="card-img-top img-responsive"
+            [src]="getImage(noticia.image)"
+            alt="modernize-img"
+            [style.width.px]="450"
+            [style.height.px]="200">
+        </div>
+        <div class="card-body p-4">
+          <span class="badge text-bg-light fs-2 py-1 px-2 lh-sm mt-3">
+            {{ noticia.category }}
+          </span>
+          <h4 class="card-title">{{ truncateTittle(noticia.title) }}</h4>
+          <h6>{{ truncateDescription(noticia.description) }}</h6>
+          <a class="btn btn-primary" routerLink="/detalle/{{noticia.id}}"><i class="far fa-eye"></i> Leer más</a>
+          <div class="d-flex align-items-center gap-4">
+            <div class="d-flex align-items-center fs-2 ms-auto">
+              <i class="ti ti-point text-dark">
+                {{ noticia.publishedAt }}
+              </i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Card -->
+    </div>
+  </div>
+</div>
+

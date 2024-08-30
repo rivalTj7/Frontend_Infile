@@ -1,0 +1,85 @@
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif !important;
+}
+
+html[data-boxed-layout=boxed] .container-fluid, html[data-boxed-layout=boxed] .container-lg, html[data-boxed-layout=boxed] .container-md, html[data-boxed-layout=boxed] .container-sm, html[data-boxed-layout=boxed] .container-xl, html[data-boxed-layout=boxed] .container-xxl {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.hover-img {
+  transition: .2s ease-in;
+}
+
+.card {
+  margin-bottom: var(--bs-gutter-x);
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.card {
+  --bs-card-spacer-y: 30px;
+  --bs-card-spacer-x: 30px;
+  --bs-card-title-spacer-y: 0.5rem;
+  --bs-card-title-color: #2a3547;
+  --bs-card-subtitle-color: var(--bs-body-color);
+  --bs-card-border-width: 0px;
+  --bs-card-border-color: #ebf1f6;
+  --bs-card-border-radius: 7px;
+  --bs-card-box-shadow: rgba(145, 158, 171, 0.2) 0px 0px 2px 0px, rgba(145, 158, 171, 0.12) 0px 12px 24px -4px;
+  --bs-card-inner-border-radius: 7px;
+  --bs-card-cap-padding-y: 15px;
+  --bs-card-cap-padding-x: 30px;
+  --bs-card-cap-bg: rgba(var(--bs-body-color-rgb), 0.03);
+  --bs-card-bg: var(--bs-body-bg);
+  --bs-card-img-overlay-padding: 1rem;
+  --bs-card-group-margin: 12px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: var(--bs-card-height);
+  color: var(--bs-body-color);
+  word-wrap: break-word;
+  background-color: var(--bs-card-bg);
+  background-clip: border-box;
+  border: var(--bs-card-border-width) solid var(--bs-card-border-color);
+  border-radius: var(--bs-card-border-radius);
+  box-shadow: var(--bs-card-box-shadow);
+}
+
+
+
+.btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #5d87ff;
+  --bs-btn-border-color: #5d87ff;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #4f73d9;
+  --bs-btn-hover-border-color: #4a6ccc;
+  --bs-btn-focus-shadow-rgb: 117, 153, 255;
+  /* --bs-btn-active-color: #fff; */
+  /* --bs-btn-active-bg: #4a6ccc; */
+  /* --bs-btn-active-border-color: #4665bf; */
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #5d87ff;
+  --bs-btn-disabled-border-color: #5d87ff;
+}
+
+.lh-sm {
+  line-height: 1.25 !important;
+}
+.fs-2 {
+  font-size: .75rem !important;
+}
+.py-1 {
+  padding-top: .25rem !important;
+  padding-bottom: .25rem !important;
+}

@@ -1,0 +1,28 @@
+<header class="topbar">
+  <div class="with-vertical">
+    <nav class="navbar navbar-expand-lg p-0">
+      <a class="navbar-brand" href="#">NotiRiv</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#primary-menu" aria-controls="primary-menu"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="primary-menu">
+        <ul class="navbar-nav ms-auto">
+          <li *ngIf="!isLogged" class="nav-item">
+            <a class="nav-link" routerLink="/login" id="navbarDropdown" role="button" aria-expanded="false" data-bs-toggle="modal">
+              Login/Register
+            </a>
+          </li>
+          <li *ngIf="isLogged" class="nav-item">
+            <a class="nav-link text-danger" (click)="onLogOut()" routerLink="/login" id="navbarDropdown2" role="button"
+               aria-expanded="false" data-bs-toggle="modal" data-bs-target="#login-popup" type="reset">
+              <i class="fas fa-sign-out-alt"></i> Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+
